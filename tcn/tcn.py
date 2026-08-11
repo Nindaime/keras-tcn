@@ -394,6 +394,9 @@ class TCN(Layer):
         config['return_state'] = self.return_state
         return config
 
+@classmethod
+def build_from_config(cls, config):
+    return cls(**config)
 
 def compiled_tcn(num_feat,  # type: int
                  num_classes,  # type: int
